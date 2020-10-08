@@ -5,5 +5,6 @@ public class Main {
         int[] array = Input.inputNumbers();
         Task1.solutionTask1(array);
         Task2.sortTask2(array);
+        Task2_by_length.sortLengthTask2(array);
     }
 }
