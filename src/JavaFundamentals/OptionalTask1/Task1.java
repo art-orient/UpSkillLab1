@@ -1,25 +1,27 @@
 package JavaFundamentals.OptionalTask1;
 
 public class Task1 {
-    public static int minLength;
-    public static int maxLength;
-    public static int numberWithMinLength;
-    public static int numberWithMaxLength;
     public static void solutionTask1 (int[] array) {
+        int minLength;
+        int maxLength;
+        int numberWithMinLength;
+        int numberWithMaxLength;
         System.out.println("Task 1:");
-        if (array.length > 0) {
+        if (array != null && array.length > 0) {
             numberWithMinLength = numberWithMaxLength = array[0];
             minLength = maxLength = String.valueOf(array[0]).length();
         } else {
             System.out.println("No numbers entered");
+            return;
         }
         for (int i = 1; i < array.length; i++) {
-            if (String.valueOf(array[i]).length() < minLength) {
-                minLength = String.valueOf(array[i]).length();
+            int len = String.valueOf(array[i]).length();
+            if (len < minLength) {
+                minLength = len;
                 numberWithMinLength = array[i];
             }
-            if (String.valueOf(array[i]).length() > maxLength) {
-                maxLength = String.valueOf(array[i]).length();
+            if (len > maxLength) {
+                maxLength = len;
                 numberWithMaxLength = array[i];
             }
         }
