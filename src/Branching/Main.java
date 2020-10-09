@@ -12,5 +12,6 @@ public class Main {
         System.out.println(Task4.task4());
         Task5.task5();
         Task6.task6();
+        Task7.task7();
     }
 }
