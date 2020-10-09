@@ -1,4 +1,4 @@
-package Branching;
+package Cycles;
 /* 3. Найти сумму квадратов первых ста чисел.*/
 public class Task3 {
     public static int task3 () {

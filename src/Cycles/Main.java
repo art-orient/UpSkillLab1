@@ -1,4 +1,4 @@
-package Branching;
+package Cycles;
 
 import java.util.Arrays;
 
