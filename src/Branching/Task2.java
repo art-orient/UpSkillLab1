@@ -16,7 +16,12 @@ public class Task2 {
             a = b;
             b = temp;
         }
-        int len = 2 + (b - a) / h; // добавлено 2 для включения крайних значений независимо от шага
+        int len = 0;
+        if ((b - a) % h != 0) {
+            len = 2 + (b - a) / h; // добавлено 2 для включения крайних значений, если шаг на них не попадет
+        } else {
+            len = 1 + (b - a) / h;
+        }
         int[] array = new int[len];
         int x = a;
         for (int i = 0; i < array.length - 1; i++) {
