@@ -16,11 +16,9 @@ public class Task2 {
             a = b;
             b = temp;
         }
-        int len = 0;
+        int len = 1 + (b - a) / h;
         if ((b - a) % h != 0) {
-            len = 2 + (b - a) / h; // добавлено 2 для включения крайних значений, если шаг на них не попадет
-        } else {
-            len = 1 + (b - a) / h;
+            len++;
         }
         int[] array = new int[len];
         int x = a;
