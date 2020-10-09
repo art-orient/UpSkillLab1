@@ -11,5 +11,6 @@ public class Main {
         System.out.println("Task 4:  Произведение квадратов первых двухсот чисел = ");
         System.out.println(Task4.task4());
         Task5.task5();
+        Task6.task6();
     }
 }
