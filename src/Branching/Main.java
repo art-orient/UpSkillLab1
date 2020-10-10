@@ -18,7 +18,12 @@ public class Main {
         x3 = 7;
         y3 = 13;
         System.out.println("Task 3: " + Task3.task3(x1, y1, x2, y2, x3, y3));
-        Task4.task4();
+        a = 8;
+        b = 12;
+        int x = 20;
+        int y = 6;
+        int z = 12;
+        System.out.println("Task 4: " + Task4.task4(a, b, x, y, z));
         Task5.task5();
     }
 }
