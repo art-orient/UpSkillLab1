@@ -24,6 +24,7 @@ public class Main {
         int y = 6;
         int z = 12;
         System.out.println("Task 4: " + Task4.task4(a, b, x, y, z));
-        Task5.task5();
+        x = 32;
+        System.out.println("Task 5: result = " + Task5.task5(x));
     }
 }
