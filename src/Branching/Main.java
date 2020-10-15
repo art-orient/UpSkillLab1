@@ -2,7 +2,7 @@ package Branching;
 
 public class Main {
     public static void main(String[] args) {
-        int a = 48;
+        int a = 90;
         int b = 42;
         Task1.task1(a, b);
         a = 324;
@@ -11,12 +11,12 @@ public class Main {
         int d = 532;
         System.out.println("Task 2: result = " + Task2.task2(a, b, c, d));
         int x1, y1, x2, y2, x3, y3;
-        x1 = 3;
+        x1 = 8;
         y1 = 7;
         x2 = 5;
-        y2 = 10;
+        y2 = 7;
         x3 = 7;
-        y3 = 13;
+        y3 = 7;
         System.out.println("Task 3: " + Task3.task3(x1, y1, x2, y2, x3, y3));
         a = 8;
         b = 12;

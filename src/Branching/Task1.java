@@ -6,7 +6,7 @@ public class Task1 {
         System.out.println("Task 1:");
         if ((a + b) < 180) {
             System.out.println("Треугольник существует.");
-            if ((a + b) == 90) {
+            if ((a + b) == 90 || a == 90 || b == 90) {
                 System.out.println("Треугольник прямоугольный.");
             } else {
                 System.out.println("Он не является прямоугольным.");

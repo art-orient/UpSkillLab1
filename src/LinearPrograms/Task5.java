@@ -7,7 +7,7 @@ public class Task5 {
         int hour = t / 3600;
         int minutes = t % 3600 / 60;
         int sec = t % 60;
-        String time = String.valueOf(hour) + "ч " + String.valueOf(minutes) + "мин " + String.valueOf(sec) + "c";
+        String time = String.format("%dч %dмин %dс", hour, minutes, sec);
         return time;
     }
 }

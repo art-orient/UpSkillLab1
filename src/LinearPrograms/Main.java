@@ -2,11 +2,12 @@ package LinearPrograms;
 
 public class Main {
     public static void main(String[] args) {
-        double a = 1.6;
-        double b = 5;
-        double c = 7;
+        double a = 4;
+        double b = 2;
+        double c = -24;
         System.out.println("Task 1:  z = " + Task1.task1(a, b, c));
-        System.out.println("Task 2:  result = " + Task2.task2(a, b, c));
+        System.out.println("Task 2:");
+        Task2.task2(a, b, c);
         double x = 0.4;
         double y = 1.5;
         System.out.println("Task 3:  result = " + Task3.task3(x, y));

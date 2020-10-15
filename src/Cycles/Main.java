@@ -10,8 +10,10 @@ public class Main {
         System.out.println("Task 3:  Сумма квадратов первых 100 чисел = " + Task3.task3());
         System.out.println("Task 4:  Произведение квадратов первых двухсот чисел = ");
         System.out.println(Task4.task4());
-        Task5.task5();
+        System.out.println("Task 5:\n"  + Task5.task5());
+        System.out.println("Task 6:");
         Task6.task6();
+        System.out.println("Task 7:");
         Task7.task7();
     }
 }

@@ -12,13 +12,23 @@ public class Task7 {
         int number2 = scanner.nextInt();
         String str1 = String.valueOf(number1);
         String str2 = String.valueOf(number2);
-        for (int i = 0; i < 10; i++) {
-            String strI = String.valueOf(i);
-            if (str1.indexOf(strI) >= 0) {
-                if (str2.indexOf(strI) >= 0) {
-                    System.out.println("В обоих числах есть цифра " + i);
-                }
+        char[] array1 = new char[str1.length()];
+        char[] array2 = new char[str2.length()];
+        for (int i = 0; i < array1.length; i++) {
+            array1[i] = str1.charAt(i);
+        }
+        for (int i = 0; i < array2.length; i++) {
+            array2[i] = str2.charAt(i);
+        }
+        String digits = "В обоих числах есть цифры: ";
+        for (char i : array1) {
+            for (char j : array2) {
+                if (i == j) {
+                    digits = digits.replace(i + " ", "");
+                    digits += i + " ";
+                    }
             }
         }
+        System.out.print(digits);
     }
 }

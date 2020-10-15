@@ -16,8 +16,8 @@ public class Task6 {
             m = n;
             n = temp;
         }
-        boolean isNumbers = false;
         for (int i = m; i <= n; i++) {
+            boolean isNumbers = false;
             System.out.print("Делители числа " + i + ": ");
             for (int j = 2; j < i-1; j++) {
                 if (i % j == 0) {
@@ -29,7 +29,6 @@ public class Task6 {
                 System.out.print("делителей нет");
             }
             System.out.println();
-            isNumbers = false;
         }
     }
 }

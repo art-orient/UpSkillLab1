@@ -9,7 +9,7 @@ public class Task2 {
         int a = scanner.nextInt();
         System.out.print("Введите конец отрезка b: ");
         int b = scanner.nextInt();
-        System.out.print("Введите швг значений функции h: ");
+        System.out.print("Введите шаг значений функции h: ");
         int h = scanner.nextInt();
         if (a > b) {
             int temp = a;
