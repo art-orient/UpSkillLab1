@@ -36,5 +36,33 @@ public class Main {
         }
         System.out.println();
         Task3.solution(a3);
+
+        System.out.println("\n\nTask 4:");
+        double[] a4 = new double[n];
+        for (int i = 0; i < n; i++) {
+            a4[i] = Math.random() * 2000 - 1000;
+            System.out.print(a4[i] + " ");
+        }
+        System.out.println(Arrays.toString(a4));
+        Task4.changeMinAndMax(a4);
+        System.out.println(Arrays.toString(a4));
+
+        System.out.println("\nTask 5:");
+        int[] a5 = new int[n];
+        for (int i = 0; i < n; i++) {
+            a5[i] = (int)(Math.random() * 10);
+        }
+        System.out.println(Arrays.toString(a5));
+        Task5.printMoreThanI(a5);
+
+        System.out.println("\n\nTask 6:");
+        n = 20;
+        double[] a6 = new double[n];
+        for (int i = 0; i < n; i++) {
+            a6[i] = Math.random() * 2000 - 1000;
+            System.out.print(a6[i] + " ");
+        }
+        System.out.println(Arrays.toString(a6));
+        System.out.println("Cумма чисел с простыми индексами = " + Task6.sumPrimeIndex(a6));
     }
 }
