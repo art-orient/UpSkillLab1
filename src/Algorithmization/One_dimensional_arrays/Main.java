@@ -55,7 +55,7 @@ public class Main {
         System.out.println(Arrays.toString(a5));
         Task5.printMoreThanI(a5);
 
-        System.out.println("\n\nTask 6:");
+        System.out.println("\nTask 6:");
         n = 20;
         double[] a6 = new double[n];
         for (int i = 0; i < n; i++) {
@@ -64,5 +64,32 @@ public class Main {
         }
         System.out.println(Arrays.toString(a6));
         System.out.println("Cумма чисел с простыми индексами = " + Task6.sumPrimeIndex(a6));
+
+        System.out.println("\nTask 7:");
+        n = 5;
+        double[] a7 = new double[n * 2];
+        for (int i = 0; i < a7.length; i++) {
+            a7[i] = Math.random() * 2000 - 1000;
+            System.out.print(a7[i] + " ");
+        }
+        System.out.println(Arrays.toString(a7));
+        System.out.println("Решение задачи = " + Task7.maxPairOfNumbers(a7));
+
+        System.out.println("\nTask 8:");
+        n = 15;
+        int[] a8 = new int[n];
+        for (int i = 0; i < n; i++) {
+            a8[i] = (int)(Math.random() * 10);
+        }
+        System.out.println(Arrays.toString(a8));
+        Task8.arrayWithoutMin(a8);
+
+        System.out.println("\nTask 9:");
+        System.out.println(Arrays.toString(a8));
+        System.out.println("Минимальное самое частое число = " + Task9.mostCommonNumber(a8));
+
+        System.out.println("\nTask 10:");
+        System.out.println(Arrays.toString(a8));
+        Task10.awayEverySecondItem(a8);
     }
 }
