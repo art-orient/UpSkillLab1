@@ -6,7 +6,7 @@ public class Task6 {
         double sum = 0;
         for (int i = 1; i < array.length; i++) {
             boolean isPrimeIndex = true;
-            for (int j = 2; j <= (i + 1) / j; j++) {
+            for (int j = 2; j * j <= (i + 1); j++) {
                 if ((i + 1) % j == 0) {
                     isPrimeIndex = false;
                 }

@@ -82,7 +82,7 @@ public class Main {
             a8[i] = (int)(Math.random() * 10);
         }
         System.out.println(Arrays.toString(a8));
-        Task8.arrayWithoutMin(a8);
+        System.out.println(Arrays.toString(Task8.arrayWithoutMin(a8)));
 
         System.out.println("\nTask 9:");
         System.out.println(Arrays.toString(a8));
