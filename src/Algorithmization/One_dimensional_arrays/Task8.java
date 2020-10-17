@@ -10,6 +10,7 @@ public class Task8 {
                 counter++;
             } else if (i < min) {
                 min = i;
+                counter = 1;
             }
         }
         int[] minArray = new int[array.length - counter];
