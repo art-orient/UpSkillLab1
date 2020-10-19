@@ -18,11 +18,16 @@ public class Task14 {
         int[][] array = new int[m][n];
         for (int i = 0; i < n; i++) {
             int j = 1;
+            int index = randIndex(m);
             while (j <= i + 1) {
-                int index = randIndex(m);
                 if (array[index][i] == 0) {
                     array[index][i] = 1;
                     j++;
+                } else {
+                    index++;
+                    if (index == m){
+                        index = 0;
+                    }
                 }
             }
         }

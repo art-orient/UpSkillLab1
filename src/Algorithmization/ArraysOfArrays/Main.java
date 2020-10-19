@@ -176,5 +176,13 @@ public class Main {
             System.out.println();
         }
 
+        System.out.println("\nTask 16:");
+        int[][] magicArray = Task16.makeMagic();
+        for (int[] i : magicArray) {
+            for (int j : i) {
+                System.out.print(j + "\t");
+            }
+            System.out.println();
+        }
     }
 }
