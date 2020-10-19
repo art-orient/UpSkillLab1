@@ -12,14 +12,16 @@ public class Task8 {
         System.out.println("Введите номера первого и второго столбцов, подлежащих замене:");
         int numberFirstColumn = scanner.nextInt();
         int numberSecondColumn = scanner.nextInt();
+        if (numberFirstColumn >= array[0].length || numberSecondColumn >= array[0].length) {
+            System.out.println("Неправильно введены номера столбцов. Введите цифры от 0 до " + (array[0].length - 1) + ".");
+            numberFirstColumn = 0;
+            numberSecondColumn = 0;
+            changeColumns(array);
+        }
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[0].length; j++) {
-                if (j == numberFirstColumn) {
-                    int temp = array[i][j];
-                    array[i][j] = array[i][numberSecondColumn];
-                    array[i][numberSecondColumn] = temp;
-                }
-            }
+                int temp = array[i][numberFirstColumn];
+                array[i][numberFirstColumn] = array[i][numberSecondColumn];
+                array[i][numberSecondColumn] = temp;
         }
         return array;
     }
