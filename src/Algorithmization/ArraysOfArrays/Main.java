@@ -46,5 +46,34 @@ public class Main {
             }
             System.out.println();
         }
+
+        System.out.println("Task 7: ");
+        double[][] array7 = Task7.formMatrix7(n);
+        for (int i = 0; i < array7[0].length; i++) {
+            for (int j = 0; j < array7.length; j++) {
+                System.out.print(array7[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+        System.out.println("Task 8:\nИсходная матрица:");
+        n = 10;
+        int[][] array8 = new int[n][n];
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                array8[i][j] = count++;
+                System.out.print(array8[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        int[][] changeArray8 = Task8.changeColumns(array8);
+        System.out.println("Матрица после замены столбцов:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(array8[i][j] + "\t");
+            }
+            System.out.println();
+        }
     }
 }
