@@ -177,12 +177,9 @@ public class Main {
         }
 
         System.out.println("\nTask 16:");
-        int[][] magicArray = Task16.makeMagic();
-        for (int[] i : magicArray) {
-            for (int j : i) {
-                System.out.print(j + "\t");
-            }
-            System.out.println();
-        }
+        System.out.println("(пока только для любых нечетных чисел)");
+        n = 17;
+        int[][] magicArray = Task16.makeMagic(n);
+        Task16.printMagic(magicArray);
     }
 }
