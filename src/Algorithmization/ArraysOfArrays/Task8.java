@@ -9,14 +9,13 @@ import java.util.Scanner;
 public class Task8 {
     public static int[][] changeColumns (int[][] array) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите номера первого и второго столбцов, подлежащих замене:");
+        System.out.println("Введите номера первого и второго столбцов, подлежащих замене.");
+        System.out.println("Допустимые цифры от 0 до " + (array[0].length - 1) + ".");
         int numberFirstColumn = scanner.nextInt();
         int numberSecondColumn = scanner.nextInt();
         if (numberFirstColumn >= array[0].length || numberSecondColumn >= array[0].length) {
-            System.out.println("Неправильно введены номера столбцов. Введите цифры от 0 до " + (array[0].length - 1) + ".");
-            numberFirstColumn = 0;
-            numberSecondColumn = 0;
-            changeColumns(array);
+            System.out.println("Неправильно введены номера столбцов. Пожалуйста, запустите программу заново.");
+            return null;
         }
         for (int i = 0; i < array.length; i++) {
                 int temp = array[i][numberFirstColumn];

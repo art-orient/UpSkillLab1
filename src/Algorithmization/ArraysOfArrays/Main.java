@@ -68,13 +68,15 @@ public class Main {
             System.out.println();
         }
         int[][] changeArray8 = Task8.changeColumns(array8);
-        System.out.println("Матрица после замены столбцов:");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                System.out.print(array8[i][j] + "\t");
+        if (changeArray8 != null) {
+            System.out.println("Матрица после замены столбцов:");
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    System.out.print(changeArray8[i][j] + "\t");
+                }
+                System.out.println();
             }
-            System.out.println();
-        }
+        } else return;
 
         System.out.println("Task 9:");
         Task9.sumNumbersInColumn(changeArray8);
@@ -107,9 +109,18 @@ public class Main {
         int[][] array12sortUp = Task12.sortUp(array12);
         for (int i = 0; i < array12sortUp.length; i++) {
             for (int j = 0; j < array12sortUp[0].length; j++) {
-                System.out.print(array12[i][j] + "\t");
+                System.out.print(array12sortUp[i][j] + "\t");
             }
             System.out.println();
         }
+        System.out.println();
+        int[][] array12sortDown = Task12.sortDown(array12);
+        for (int i = 0; i < array12sortDown.length; i++) {
+            for (int j = 0; j < array12sortDown[0].length; j++) {
+                System.out.print(array12sortDown[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
     }
 }
