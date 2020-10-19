@@ -90,5 +90,9 @@ public class Main {
             System.out.println();
         }
         Task10.findPositiveOfDiagonal(array10);
+
+        System.out.println("\nTask 11:");
+        Task11.find3by5();
+        
     }
 }
