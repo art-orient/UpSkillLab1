@@ -22,8 +22,8 @@ public class Main {
         System.out.println("Task 4: ");
         int n = 8;
         int[][] array4 = Task4.formMatrix(n);
-        for (int i = 0; i < array4[0].length; i++) {
-            for (int j = 0; j < array4.length; j++) {
+        for (int i = 0; i < array4.length; i++) {
+            for (int j = 0; j < array4[0].length; j++) {
                 System.out.print(array4[i][j] + " ");
             }
             System.out.println();
@@ -31,8 +31,8 @@ public class Main {
 
         System.out.println("Task 5: ");
         int[][] array5 = Task5.formMatrix5(n);
-        for (int i = 0; i < array5[0].length; i++) {
-            for (int j = 0; j < array5.length; j++) {
+        for (int i = 0; i < array5.length; i++) {
+            for (int j = 0; j < array5[0].length; j++) {
                 System.out.print(array5[i][j] + " ");
             }
             System.out.println();
@@ -40,8 +40,8 @@ public class Main {
 
         System.out.println("Task 6: ");
         int[][] array6 = Task6.formMatrix6(n);
-        for (int i = 0; i < array6[0].length; i++) {
-            for (int j = 0; j < array6.length; j++) {
+        for (int i = 0; i < array6.length; i++) {
+            for (int j = 0; j < array6[0].length; j++) {
                 System.out.print(array6[i][j] + " ");
             }
             System.out.println();
@@ -49,8 +49,8 @@ public class Main {
 
         System.out.println("Task 7: ");
         double[][] array7 = Task7.formMatrix7(n);
-        for (int i = 0; i < array7[0].length; i++) {
-            for (int j = 0; j < array7.length; j++) {
+        for (int i = 0; i < array7.length; i++) {
+            for (int j = 0; j < array7[0].length; j++) {
                 System.out.print(array7[i][j] + "\t");
             }
             System.out.println();
@@ -93,6 +93,23 @@ public class Main {
 
         System.out.println("\nTask 11:");
         Task11.find3by5();
-        
+
+        System.out.println("\nTask 12:");
+        int[][] array12 = new int[10][20];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 20; j++) {
+                array12[i][j] = (int) (Math.random() * 100);
+                System.out.print(array12[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        int[][] array12sortUp = Task12.sortUp(array12);
+        for (int i = 0; i < array12sortUp.length; i++) {
+            for (int j = 0; j < array12sortUp[0].length; j++) {
+                System.out.print(array12[i][j] + "\t");
+            }
+            System.out.println();
+        }
     }
 }

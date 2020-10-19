@@ -6,8 +6,8 @@ public class Task3 {
     public static void printLineK_AndColumnP (int[][] array, int k, int p) {
         System.out.println("Строка " + k + " - " + Arrays.toString(array[k-1]));
         String columnP = "";
-        for (int i = 0; i < array[0].length; i++) {
-            for (int j = 0; j < array.length; j++) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {
                 if (j + 1 == p) {
                     columnP += array[i][j] + " ";
                 }

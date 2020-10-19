@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class Task4 {
     public static int[][] formMatrix (int n) {
         int[][] array = new int[n][n];
-        for (int i = 0; i < array[0].length; i++) {
-            for (int j = 0; j < array.length; j++) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {
                 if (i % 2 == 0) {
                     array[i][j] = j + 1;
                 } else {

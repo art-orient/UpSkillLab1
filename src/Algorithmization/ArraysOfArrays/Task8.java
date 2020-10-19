@@ -12,8 +12,8 @@ public class Task8 {
         System.out.println("Введите номера первого и второго столбцов, подлежащих замене:");
         int numberFirstColumn = scanner.nextInt();
         int numberSecondColumn = scanner.nextInt();
-        for (int i = 0; i < array[0].length; i++) {
-            for (int j = 0; j < array.length; j++) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {
                 if (j == numberFirstColumn) {
                     int temp = array[i][j];
                     array[i][j] = array[i][numberSecondColumn];
