@@ -122,5 +122,30 @@ public class Main {
             System.out.println();
         }
 
+        System.out.println("\nTask 13:");
+        int[][] array13 = new int[10][10];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                array13[i][j] = (int) (Math.random() * 200 - 100);
+                System.out.print(array13[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        int[][] array13ColumnsUp = Task13.sortColumnsUp(array13);
+        for (int i = 0; i < array13ColumnsUp.length; i++) {
+            for (int j = 0; j < array13ColumnsUp[0].length; j++) {
+                System.out.print(array13ColumnsUp[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        int[][] array13ColumnsDown = Task13.sortColumnsDown(array13);
+        for (int i = 0; i < array13ColumnsDown.length; i++) {
+            for (int j = 0; j < array13ColumnsDown[0].length; j++) {
+                System.out.print(array13ColumnsDown[i][j] + "\t");
+            }
+            System.out.println();
+        }
     }
 }
