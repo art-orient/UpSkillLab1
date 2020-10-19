@@ -3,7 +3,7 @@ package Algorithmization.ArraysOfArrays;
 // Вывести на экран саму матрицу и номера строк, в которых число 5 встречается три и более раз.
 public class Task11 {
     public static void find3by5() {
-    String numbersLOfLines = "";
+    StringBuilder numbersLOfLines = new StringBuilder();
     int[][] array11 = new int[10][20];
         for (int i = 0; i < 10; i++) {
             int count = 0;
@@ -15,12 +15,12 @@ public class Task11 {
                 }
             }
             if (count > 2) {
-                numbersLOfLines += i + " ";
+                numbersLOfLines = numbersLOfLines.append(i + " ");
             }
             System.out.println();
         }
-        if (!numbersLOfLines.isEmpty()) {
-            System.out.println("Номера строк, в которых число 5 встречается три и более раз - " + numbersLOfLines);
+        if (numbersLOfLines.length() > 0) {
+            System.out.println("Номера строк, в которых число 5 встречается три и более раз - " + numbersLOfLines.toString());
         } else {
             System.out.println("Нет строк, в которых число 5 встречается три и более раз.");
         }
