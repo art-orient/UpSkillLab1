@@ -15,7 +15,7 @@ public class Task8 {
         int numberSecondColumn = scanner.nextInt();
         if (numberFirstColumn >= array[0].length || numberSecondColumn >= array[0].length) {
             System.out.println("Неправильно введены номера столбцов. Пожалуйста, запустите программу заново.");
-            return null;
+            return changeColumns(array);
         }
         for (int i = 0; i < array.length; i++) {
                 int temp = array[i][numberFirstColumn];
