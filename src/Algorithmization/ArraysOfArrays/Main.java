@@ -147,5 +147,15 @@ public class Main {
             }
             System.out.println();
         }
+
+        System.out.println("\nTask 14:");
+        int[][] array14 = Task14.zeroOrOne();
+        for (int i = 0; i < array14.length; i++) {
+            for (int j = 0; j < array14[0].length; j++) {
+                System.out.print(array14[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        System.out.println();
     }
 }
