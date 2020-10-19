@@ -75,5 +75,20 @@ public class Main {
             }
             System.out.println();
         }
+
+        System.out.println("Task 9:");
+        Task9.sumNumbersInColumn(changeArray8);
+
+        System.out.println("Task 10:\nИсходная матрица:");
+        n = 10;
+        int[][] array10 = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                array10[i][j] = (int)(Math.random() * 200 - 100);
+                System.out.print(array10[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        Task10.findPositiveOfDiagonal(array10);
     }
 }
