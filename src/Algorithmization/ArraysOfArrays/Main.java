@@ -31,9 +31,18 @@ public class Main {
 
         System.out.println("Task 5: ");
         int[][] array5 = Task5.formMatrix5(n);
-        for (int i = 0; i < array4[0].length; i++) {
-            for (int j = 0; j < array4.length; j++) {
+        for (int i = 0; i < array5[0].length; i++) {
+            for (int j = 0; j < array5.length; j++) {
                 System.out.print(array5[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("Task 6: ");
+        int[][] array6 = Task6.formMatrix6(n);
+        for (int i = 0; i < array6[0].length; i++) {
+            for (int j = 0; j < array6.length; j++) {
+                System.out.print(array6[i][j] + " ");
             }
             System.out.println();
         }
