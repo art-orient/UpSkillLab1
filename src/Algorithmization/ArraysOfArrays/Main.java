@@ -157,5 +157,24 @@ public class Main {
             System.out.println();
         }
         System.out.println();
+
+        System.out.println("\nTask 15:");
+        int[][] array15 = new int[10][10];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                array15[i][j] = (int) (Math.random() * 200 - 100);
+                System.out.print(array15[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        int[][] array15new = Task15.changeMax(array15);
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                System.out.print(array15new[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
     }
 }

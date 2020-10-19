@@ -16,9 +16,9 @@ public class Task14 {
             return zeroOrOne();
         }
         int[][] array = new int[m][n];
-        for (int i = 1; i < n; i++) {  //  столбцы
+        for (int i = 0; i < n; i++) {
             int j = 1;
-            while (j <= i) {
+            while (j <= i + 1) {
                 int index = randIndex(m);
                 if (array[index][i] == 0) {
                     array[index][i] = 1;
