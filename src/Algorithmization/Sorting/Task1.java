@@ -12,7 +12,7 @@ public class Task1 {
             } else if (i <= array2.length + k) {
                 array[i] = array2[index2++];
             } else if (i > array2.length + k) {
-                array[i] = array1[k++ + 1];
+                array[i] = array1[++k];
             }
         }
         return array;
