@@ -2,6 +2,7 @@ package Algorithmization.Sorting;
 // 2. Реализуйте сортировку выбором.
 public class Task2 {
     public static int[] sortSelection (int[] array) {
+        long start = System.currentTimeMillis();
         for (int i = 0; i < array.length; i++) {
             int min = array[i];
             int index = 0;
@@ -17,6 +18,8 @@ public class Task2 {
                 array[index] = temp;
             }
         }
+        long finish = System.currentTimeMillis();
+        System.out.println("SelectionSort = " + (finish - start) + " ms");
         return array;
     }
 }
