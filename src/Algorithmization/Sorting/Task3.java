@@ -4,13 +4,18 @@ package Algorithmization.Sorting;
 public class Task3 {
     public static int[] sortBubble (int[] array) {
         long start = System.currentTimeMillis();
+        boolean isSort = true;
         for (int i = 0; i < array.length; i++) {
             for (int j = 1; j < array.length - i; j++) {
                 if (array[j] < array[j-1]) {
                     int temp = array[j];
                     array[j] = array[j-1];
                     array[j-1] = temp;
+                    isSort = false;
                 }
+            }
+            if (isSort) {
+                break;
             }
         }
         long finish = System.currentTimeMillis();
