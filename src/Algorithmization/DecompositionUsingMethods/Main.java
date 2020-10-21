@@ -28,5 +28,11 @@ public class Main {
         a = scanner.nextInt();
         System.out.println("Площадь шестиугольника = " + Task3.areaHexagon(a));
 
+        System.out.println("\nTask 4:");
+        System.out.print("Введите количество точек, n = ");
+        int n = scanner.nextInt();
+        System.out.println("Максимальное расстояние = " + Task4.findDistance(n));
+
+
     }
 }
