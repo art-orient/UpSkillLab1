@@ -23,7 +23,10 @@ public class Main {
         int d = scanner.nextInt();
         System.out.println("Наибольший общий делитель = " + Task2.findNOD4(a, b, c, d));
 
-
+        System.out.println("\nTask 3:");
+        System.out.print("Введите сторону шестиугольника, а = ");
+        a = scanner.nextInt();
+        System.out.println("Площадь шестиугольника = " + Task3.areaHexagon(a));
 
     }
 }
