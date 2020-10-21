@@ -1,28 +1,20 @@
 package Algorithmization.DecompositionUsingMethods;
-
-import java.util.Scanner;
-
 // 1. Написать метод(методы) для нахождения наибольшего общего делителя и наименьшего общего
 // кратного двух натуральных чисел: ...
 public class Task1 {
-    public static void findNOD () {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите первое натуральное число: ");
-        int inputA = scanner.nextInt();
-        System.out.print("Введите второе натуральное число: ");
-        int inputB = scanner.nextInt();
-        if (inputA < 1 || inputB < 1) {
+    public static int findNOD (int a, int b) {
+        if (a < 1 || b < 1) {
             System.out.println("Введенные числа не являются натуральными. Попробуйте еще раз.");
-            return;
+            return -1;
         }
-        int nod = inputA;
-        int b = inputB;
+        int nok = a * b;
         while (b != 0){
-            int temp = nod % b;
-            nod = b;
+            int temp = a % b;
+            a = b;
             b = temp;
         }
-        System.out.println("Наибольший общий делитель = " + nod);
-        System.out.println("Наибольшee общee кратное = " + (inputA * inputB)/nod);
+        System.out.println("Наибольший общий делитель = " + a);
+        System.out.println("Наибольшee общee кратное = " + nok/a);
+        return a;
     }
 }
