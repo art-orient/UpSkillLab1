@@ -112,5 +112,9 @@ public class Main {
         int n13 = scanner.nextInt();
         System.out.println("Найденные пары \"близнецов\" - " + Task13.findTwins(n13));
 
+        System.out.println("\nTask 14:");
+        System.out.print("Введите натуральное число k: ");
+        int k14 = scanner.nextInt();
+        System.out.println("Найденные числа Армстронга - " + Task14.findArmstrong(k14));
     }
 }
