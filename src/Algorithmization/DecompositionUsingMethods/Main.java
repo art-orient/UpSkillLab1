@@ -89,6 +89,17 @@ public class Main {
         System.out.println("Из цифр этого числа сформирован массив:");
         System.out.println(Arrays.toString(Task10.arrayFromDigits(n)));
 
+        System.out.println("\nTask 11:");
+        System.out.println("Введите два натуральных числа:");
+        int xx = scanner.nextInt();
+        int yy = scanner.nextInt();
+        int result11 = Task11.moreDigits(xx, yy);
+        if (result11 == 0) {
+            System.out.println("В этих числах одинаковое количество цифр");
+        } else {
+            System.out.println("Наибольшее количество цифр в числе " + result11);
+        }
+
 
     }
 }
