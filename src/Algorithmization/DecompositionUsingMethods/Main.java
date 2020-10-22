@@ -56,6 +56,8 @@ public class Main {
             System.out.printf("Числа %d, %d и %d не являются взаимно простыми.", a6, b6, c6);
         }
 
+        System.out.println("\nTask 7:");
+        System.out.println("Сумма факториалов нечетных чисел от 1 до 9 = " + Task7.sumFactorialsOddNumbers());
 
     }
 }
