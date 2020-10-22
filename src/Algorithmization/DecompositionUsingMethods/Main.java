@@ -107,5 +107,10 @@ public class Main {
         int n = scanner.nextInt();
         System.out.println(Arrays.toString(Task12.formArray12(k, n)));
 
+        System.out.println("\nTask 13:");
+        System.out.print("Введите натуральное число N (больше 2): ");
+        int n13 = scanner.nextInt();
+        System.out.println("Найденные пары \"близнецов\" - " + Task13.findTwins(n13));
+
     }
 }
