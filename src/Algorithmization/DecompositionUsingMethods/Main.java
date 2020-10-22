@@ -121,6 +121,8 @@ public class Main {
         System.out.print("Введите количество цифр в числе (от 2 до 9), n = ");
         int n15 = scanner.nextInt();
         System.out.println("Найденные числа - " + Task15.findGrow(n15));
+        System.out.println("Реализация альтернативным методом:");
+        System.out.println("Найденные числа - " + Task15var2.findGrow(n15));
 
         System.out.println("\nTask 16:");
         System.out.print("Введите количество цифр в числе (от 2 до 9), n = ");
