@@ -135,5 +135,7 @@ public class Main {
         System.out.print("Введите число = ");
         int n17 = scanner.nextInt();
         System.out.println("Чтобы дойти до 0 необходимо итераций - " + Task17.subSumToZero(n17));
+        Integer count = 0;
+        System.out.println("Чтобы дойти до 0 необходимо итераций - " + Task17recursia.subSumToZero(n17, count));
     }
 }
