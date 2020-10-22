@@ -128,5 +128,10 @@ public class Main {
         long sum = Task16.findSum(n16);
         System.out.println("Полученная сумма = " + sum);
         System.out.println("Четных цифр в этой сумме - " + Task16.sumOddDigits(sum));
+
+        System.out.println("\nTask 17:");
+        System.out.print("Введите число = ");
+        int n17 = scanner.nextInt();
+        System.out.println("Чтобы дойти до 0 необходимо итераций - " + Task17.subSumToZero(n17));
     }
 }
