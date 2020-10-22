@@ -3,13 +3,16 @@ package Algorithmization.DecompositionUsingMethods;
 //    Найти и напечатать все пары «близнецов» из отрезка [n,2n], где n - заданное натуральное число больше 2.
 //    Для решения задачи использовать декомпозицию.
 public class Task13 {
-    public static String findTwins (int n) {
-        String twins = "";
-        int twin1 = 1;
+    public static StringBuilder findTwins (int n) {
+        StringBuilder twins = new StringBuilder();
+        int twin1 = 0;
         for (int i = n; i <= 2 * n; i++) {
             if (isPrime(i)) {
+                if (twin1 == 0) {
+                    twin1 = i;
+                }
                 if (i == twin1 + 2) {
-                    twins += twin1 + " и " + i + "; ";
+                    twins.append(twin1 + " и " + i + "; ");
                 }
                 twin1 = i;
             }
@@ -18,12 +21,11 @@ public class Task13 {
     }
 
     public static boolean isPrime (int x) {
-            boolean isPrime = true;
-            for (int i = 2; i < x / i; i++) {
+            for (int i = 2; i * i <= x; i++) {
                 if (x % i == 0) {
-                    isPrime = false;
+                    return false;
                 }
             }
-           return isPrime;
+           return true;
     }
 }

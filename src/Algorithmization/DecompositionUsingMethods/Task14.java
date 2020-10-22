@@ -6,11 +6,11 @@ package Algorithmization.DecompositionUsingMethods;
 // в условии задания есть ошибка - нужна сумма цифр, возведеннЫХ в степень n, а не сумма, возведенная в эту степень.
 // https://ru.wikipedia.org/wiki/Число_Армстронга
 public class Task14 {
-    public static String findArmstrong(int k) {
-        String armstrong = "";
+    public static StringBuilder findArmstrong(int k) {
+        StringBuilder armstrong = new StringBuilder();
         for (int i = 1; i <= k; i++) {
             if (sumArmstrong(i) == i) {
-                armstrong += i + " ";
+                armstrong.append(i + " ");
             }
         }
         return armstrong;

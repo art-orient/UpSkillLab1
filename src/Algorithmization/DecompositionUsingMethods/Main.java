@@ -85,9 +85,9 @@ public class Main {
 
         System.out.println("\nTask 10:");
         System.out.print("Введите натуральное число N: ");
-        int n = scanner.nextInt();
+        int n10 = scanner.nextInt();
         System.out.println("Из цифр этого числа сформирован массив:");
-        System.out.println(Arrays.toString(Task10.arrayFromDigits(n)));
+        System.out.println(Arrays.toString(Task10.arrayFromDigits(n10)));
 
         System.out.println("\nTask 11:");
         System.out.println("Введите два натуральных числа:");
@@ -102,10 +102,10 @@ public class Main {
 
         System.out.println("\nTask 12:");
         System.out.print("Введите число K (сумма цифр искомых чисел): ");
-        int k = scanner.nextInt();
+        int k12 = scanner.nextInt();
         System.out.print("Введите число N (максимально возможное число): ");
-        int n = scanner.nextInt();
-        System.out.println(Arrays.toString(Task12.formArray12(k, n)));
+        int n12 = scanner.nextInt();
+        System.out.println(Arrays.toString(Task12.formArray12(k12, n12)));
 
         System.out.println("\nTask 13:");
         System.out.print("Введите натуральное число N (больше 2): ");
@@ -116,5 +116,10 @@ public class Main {
         System.out.print("Введите натуральное число k: ");
         int k14 = scanner.nextInt();
         System.out.println("Найденные числа Армстронга - " + Task14.findArmstrong(k14));
+
+        System.out.println("\nTask 15:");
+        System.out.print("Введите количество цифр в числе (от 2 до 9), n = ");
+        int n15 = scanner.nextInt();
+        System.out.println("Найденные числа - " + Task15.findGrow(n15));
     }
 }
