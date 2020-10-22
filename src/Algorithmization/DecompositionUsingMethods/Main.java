@@ -83,5 +83,12 @@ public class Main {
         int t = scanner.nextInt();
         System.out.println("Площаль четырехугольника = " + Task9.areaQuadrangle(x, y, z, t));
 
+        System.out.println("\nTask 10:");
+        System.out.print("Введите натуральное число N: ");
+        int n = scanner.nextInt();
+        System.out.println("Из цифр этого числа сформирован массив:");
+        System.out.println(Arrays.toString(Task10.arrayFromDigits(n)));
+
+
     }
 }
