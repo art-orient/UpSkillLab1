@@ -121,5 +121,12 @@ public class Main {
         System.out.print("Введите количество цифр в числе (от 2 до 9), n = ");
         int n15 = scanner.nextInt();
         System.out.println("Найденные числа - " + Task15.findGrow(n15));
+
+        System.out.println("\nTask 16:");
+        System.out.print("Введите количество цифр в числе (от 2 до 9), n = ");
+        int n16 = scanner.nextInt();
+        long sum = Task16.findSum(n16);
+        System.out.println("Полученная сумма = " + sum);
+        System.out.println("Четных цифр в этой сумме - " + Task16.sumOddDigits(sum));
     }
 }
