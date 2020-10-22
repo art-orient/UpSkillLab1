@@ -100,6 +100,12 @@ public class Main {
             System.out.println("Наибольшее количество цифр в числе " + result11);
         }
 
+        System.out.println("\nTask 12:");
+        System.out.print("Введите число K (сумма цифр искомых чисел): ");
+        int k = scanner.nextInt();
+        System.out.print("Введите число N (максимально возможное число): ");
+        int n = scanner.nextInt();
+        System.out.println(Arrays.toString(Task12.formArray12(k, n)));
 
     }
 }
