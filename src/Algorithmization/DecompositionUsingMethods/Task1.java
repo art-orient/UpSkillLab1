@@ -7,7 +7,6 @@ public class Task1 {
             System.out.println("Введенные числа не являются натуральными. Попробуйте еще раз.");
             return -1;
         }
-        int nok = a * b;
         while (b != 0){
             int temp = a % b;
             a = b;
