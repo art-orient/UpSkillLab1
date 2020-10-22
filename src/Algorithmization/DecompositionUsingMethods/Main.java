@@ -59,5 +59,29 @@ public class Main {
         System.out.println("\nTask 7:");
         System.out.println("Сумма факториалов нечетных чисел от 1 до 9 = " + Task7.sumFactorialsOddNumbers());
 
+        System.out.println("\nTask 8:");
+        int[] array8 = new int[15];
+        for (int i = 0; i < array8.length; i++) {
+            array8[i] = (int)(Math.random()*100);
+        }
+        System.out.println("Для проверки решения используем массив из 15 элементов:");
+        System.out.println(Arrays.toString(array8));
+        System.out.println("Введите номер элемента массива (от 0 до 12), начиная с которого вычислим сумму 3 идущих подряд элементов:");
+        int k = scanner.nextInt();
+        System.out.printf("Сумма 3 элементов массива, начиная с элемента номер %d  = %d.",
+                            k, Task8.sum3elemArray(array8, k));
+
+        System.out.println("\nTask 9:");
+        System.out.println("Введите длины 4 сторон прямоугольника (x, y, z, t):");
+        System.out.print("x = ");
+        int x = scanner.nextInt();
+        System.out.print("y = ");
+        int y = scanner.nextInt();
+        System.out.print("z = ");
+        int z = scanner.nextInt();
+        System.out.print("t = ");
+        int t = scanner.nextInt();
+        System.out.println("Площаль четырехугольника = " + Task9.areaQuadrangle(x, y, z, t));
+
     }
 }
