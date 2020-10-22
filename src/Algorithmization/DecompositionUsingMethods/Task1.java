@@ -13,8 +13,10 @@ public class Task1 {
             a = b;
             b = temp;
         }
-        System.out.println("Наибольший общий делитель = " + a);
-        System.out.println("Наибольшee общee кратное = " + nok/a);
         return a;
+    }
+
+    public static int findNOK (int a, int b) {
+        return a * b / findNOD(a, b);
     }
 }

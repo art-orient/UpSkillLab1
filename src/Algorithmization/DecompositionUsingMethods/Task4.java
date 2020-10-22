@@ -7,7 +7,8 @@ import java.util.Scanner;
 // определяющие, между какими из пар точек самое большое расстояние.
 // Указание. Координаты точек занести в массив.
 public class Task4 {
-    public static double findDistance (int n) {
+
+    public static int[] findDistance (int n) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Необходимо ввести координаты " + n + " точек.");
         int [] array = new int[n * 2];
@@ -18,18 +19,24 @@ public class Task4 {
             System.out.print("y = ");
             array[i * 2 + 1] = scanner.nextInt();
         }
-        System.out.println(Arrays.toString(array));
-        double distance = 0;
 
+        double distance = 0;
+        int[] points = new int[6];
         for (int i = 0; i < n - 1; i++) {
             for (int j = i + 1; j < n; j++) {
                 double temp = distance2points(array[i * 2], array[i * 2 + 1], array[j * 2], array[j * 2 + 1]);
                 if (temp > distance) {
                     distance = temp;
+                    points[0] = i + 1;
+                    points[1] = array[i * 2];
+                    points[2] = array[i * 2 + 1];
+                    points[3] = j + 1;
+                    points[4] = array[j * 2];
+                    points[5] = array[j * 2 + 1];
                 }
             }
         }
-        return distance;
+        return points;
     }
 
     private static double distance2points (int x1, int y1, int x2, int y2) {
