@@ -21,7 +21,7 @@ public class Task15 {
         while (x > 9) {
             x = x / 10;
             int digit2 = x % 10;
-            if (digit1 - digit2 != 1) {
+            if (digit1 <= digit2) {
                 return false;
             }
             digit1 = digit2;
