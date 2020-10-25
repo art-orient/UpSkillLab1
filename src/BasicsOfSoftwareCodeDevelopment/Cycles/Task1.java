@@ -1,4 +1,4 @@
-package Cycles;
+package BasicsOfSoftwareCodeDevelopment.Cycles;
 
 import java.util.Scanner;
 //1. Напишите программу, где пользователь вводит любое целое положительное число.

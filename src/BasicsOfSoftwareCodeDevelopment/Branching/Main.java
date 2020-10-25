@@ -1,4 +1,4 @@
-package Branching;
+package BasicsOfSoftwareCodeDevelopment.Branching;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package LinearPrograms;
+package BasicsOfSoftwareCodeDevelopment.LinearPrograms;
 import static java.lang.Math.*;
 // 3. Вычислить значение выражения по формуле (все переменные принимают действительные значения):
 // (см. формулу в задании)

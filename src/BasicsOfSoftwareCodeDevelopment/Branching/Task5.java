@@ -1,4 +1,4 @@
-package Branching;
+package BasicsOfSoftwareCodeDevelopment.Branching;
 // 5. Вычислить значение функции: (смотри формулу)
 public class Task5 {
     public static double task5(int x){

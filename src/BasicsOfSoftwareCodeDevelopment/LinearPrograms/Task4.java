@@ -1,4 +1,4 @@
-package LinearPrograms;
+package BasicsOfSoftwareCodeDevelopment.LinearPrograms;
 // 4. (x * 1000) % 1000 + (int) x / 1000.0;.
 // Поменять местами дробную и целую части числа и вывести полученное значение числа.
 public class Task4 {

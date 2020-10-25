@@ -1,4 +1,4 @@
-package Cycles;
+package BasicsOfSoftwareCodeDevelopment.Cycles;
 // 5. Вывести на экран соответствий между символами и их численными обозначениями в памяти компьютера.
 public class Task5 {
     public static int task5 () {

@@ -1,4 +1,4 @@
-package LinearPrograms;
+package BasicsOfSoftwareCodeDevelopment.LinearPrograms;
 // 2. Вычислить значение выражения по формуле (все переменные принимают действительные значения):
 // (см. формулу в задании)
 public class Task2 {
