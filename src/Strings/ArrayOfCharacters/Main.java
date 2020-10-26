@@ -10,5 +10,9 @@ public class Main {
         System.out.println(Arrays.toString(Task1.camelToSnake(camelCase)));
 
         System.out.println("\nTask 2:");
+        String str2 = "One word, two words, three words, but wording or fourth word of words.";
+        System.out.println(str2);
+        System.out.println(Task2.makeLetter(str2));
+
     }
 }
