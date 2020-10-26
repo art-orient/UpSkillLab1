@@ -3,15 +3,6 @@ package Strings.ArrayOfCharacters;
 // Крайние пробелы в строке удалить.
 public class Task5 {
     public static String delSpace (String str) {
-        str = str.strip();
-        StringBuilder space = new StringBuilder();
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == ' ' && str.charAt(i+1) == ' ') {
-                continue;
-            } else {
-                space.append(str.charAt(i));
-            }
-        }
-        return space.toString();
+        return str.strip().replaceAll("\\s+", " ");
     }
 }
