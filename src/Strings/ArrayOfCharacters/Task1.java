@@ -10,7 +10,7 @@ public class Task1 {
                     nameSnake.append(symbol);
                 } else {
                     nameSnake.append('_');
-                    nameSnake.append((char)(symbol + 32));
+                    nameSnake.append(symbol + 32);
                 }
             }
             names[i] = nameSnake.toString();
