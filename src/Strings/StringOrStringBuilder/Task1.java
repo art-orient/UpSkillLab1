@@ -1,16 +1,19 @@
 package Strings.StringOrStringBuilder;
 // 1. Дан текст (строка). Найдите наибольшее количество подряд идущих пробелов в нем.
 public class Task1 {
-    public static String maxSumSpace (String str) {
-        str = str.strip();
-        StringBuilder space = new StringBuilder();
+    public static int maxSumSpace (String str) {
+        int sum = 0;
+        int maxSpace = 0;
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == ' ' && str.charAt(i+1) == ' ') {
-                continue;
+            if (str.charAt(i) == ' ') {
+                sum++;
+                if (sum > maxSpace) {
+                    maxSpace = sum;
+                }
             } else {
-                space.append(str.charAt(i));
+                sum = 0;
             }
         }
-        return space.toString();
+        return maxSpace;
     }
 }
