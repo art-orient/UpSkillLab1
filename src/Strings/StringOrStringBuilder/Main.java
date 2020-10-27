@@ -43,7 +43,11 @@ public class Main {
         System.out.println(str2);
         System.out.println("result = " + Task8.maxLength(str2));
 
-        
+        System.out.println("\nTask 9:");
+        String str9 = "abJGc GK GTD cde dFHKef";
+        System.out.println(str9);
+        System.out.println("Number small letters = " + Task9.smallLetters(str9));
+        System.out.println("Number big letters = " + Task9.bigLetters(str9));
 
     }
 }
