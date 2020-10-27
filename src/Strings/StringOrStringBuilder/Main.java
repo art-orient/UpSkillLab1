@@ -13,5 +13,13 @@ public class Main {
         String str2 = "There are wild and domestic animals. Some animals are dangerous.";
         System.out.println(str2);
         System.out.println("result = " + Task2.addBpastA(str2));
+
+        System.out.println("\nTask 3:");
+        String str3 = "palindrome";
+        System.out.println(str3);
+        System.out.println("result = " + Task3.isPalindrome(str3));
+        String str3pal = "redivider";
+        System.out.println(str3pal);
+        System.out.println("result = " + Task3.isPalindrome(str3pal));
     }
 }
