@@ -21,5 +21,10 @@ public class Main {
         String str3pal = "redivider";
         System.out.println(str3pal);
         System.out.println("result = " + Task3.isPalindrome(str3pal));
+
+        System.out.println("\nTask 4:");
+        String str4 = "информатика";
+        System.out.println(str4);
+        System.out.println("result = " + Task4.makeCake(str4));
     }
 }
