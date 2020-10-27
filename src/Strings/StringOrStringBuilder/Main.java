@@ -1,7 +1,5 @@
 package Strings.StringOrStringBuilder;
 
-import Strings.ArrayOfCharacters.Task5;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Task 1:");
@@ -26,5 +24,15 @@ public class Main {
         String str4 = "информатика";
         System.out.println(str4);
         System.out.println("result = " + Task4.makeCake(str4));
+
+        System.out.println("\nTask 5:");
+        System.out.println(str2);
+        System.out.println("result = " + Task5.findSumA(str2));
+
+        System.out.println("\nTask 6:");
+        String str6 = "Domestic animals live at home or at the farm.";
+        System.out.println(str6);
+        System.out.println("result = " + Task6.twiceString(str6));
+
     }
 }
