@@ -5,8 +5,7 @@ public class Task6 {
         StringBuilder twice = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
             char symbol = str.charAt(i);
-            twice.append(symbol);
-            twice.append(symbol);
+            twice.append(symbol).append(symbol);
             }
         return twice;
     }
