@@ -49,5 +49,9 @@ public class Main {
         System.out.println("Number small letters = " + Task9.smallLetters(str9));
         System.out.println("Number big letters = " + Task9.bigLetters(str9));
 
+        System.out.println("\nTask 10:");
+        String str10 = "I get up at seven o’clock. When do you get up? At seven! You remember it? Yes, it is.";
+        System.out.println(str10);
+        System.out.println("Number of sentences = " + Task10.sumSentence(str10));
     }
 }
