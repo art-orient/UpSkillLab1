@@ -39,5 +39,11 @@ public class Main {
         System.out.println(str7);
         System.out.println("result = " + Task7.delDuplicates(str7));
 
+        System.out.println("\nTask 8:");
+        System.out.println(str2);
+        System.out.println("result = " + Task8.maxLength(str2));
+
+        
+
     }
 }
