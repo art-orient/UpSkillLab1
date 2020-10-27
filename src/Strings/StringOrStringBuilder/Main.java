@@ -34,5 +34,10 @@ public class Main {
         System.out.println(str6);
         System.out.println("result = " + Task6.twiceString(str6));
 
+        System.out.println("\nTask 7:");
+        String str7 = "abc cde def";
+        System.out.println(str7);
+        System.out.println("result = " + Task7.delDuplicates(str7));
+
     }
 }
