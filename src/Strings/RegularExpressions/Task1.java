@@ -1,6 +1,5 @@
 package Strings.RegularExpressions;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 // 1. Cоздать приложение, разбирающее текст (текст хранится в строке) и позволяющее
