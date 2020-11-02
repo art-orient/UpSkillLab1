@@ -7,8 +7,9 @@ import java.util.regex.Pattern;
 // (открывающий тег, закрывающий тег, содержимое тега, тег без тела).
 // Пользоваться готовыми парсерами XML для решения данной задачи нельзя.
 public class Task2 {
+    static Pattern start = Pattern.compile("<[^/].*?>");
+    static Pattern end = Pattern.compile("\\w+?\\b");
     public static void analizator (String str){
-        Pattern start = Pattern.compile("<[^/].+?>");
         Matcher matcherStart = start.matcher(str);
         int count = 0;
         while (matcherStart.find()){
@@ -31,7 +32,6 @@ public class Task2 {
         if (Pattern.matches("<\\w+?\\b/>", tag)){
             return tag;
         }
-        Pattern end = Pattern.compile("\\w+?\\b");
         Matcher matcherEnd = end.matcher(tag);
         if (matcherEnd.find()){
             return "</" + matcherEnd.group() + ">";

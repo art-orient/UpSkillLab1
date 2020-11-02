@@ -49,5 +49,7 @@ public class Main {
                 "\n" +
                 "</notes>";
         Task2.analizator(str2);
+        String str3 = "<a><b>1</b><c/></a>";
+        Task2.analizator(str3);
     }
 }
