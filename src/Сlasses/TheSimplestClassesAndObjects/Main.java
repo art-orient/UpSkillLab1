@@ -1,4 +1,6 @@
-package Сlasses.TheSimplestClassesAndObjects.Task1;
+package Сlasses.TheSimplestClassesAndObjects;
+
+import Сlasses.TheSimplestClassesAndObjects.Task1.Test1;
 
 public class Main {
     public static void main(String[] args) {
