@@ -5,7 +5,7 @@ package Сlasses.TheSimplestClassesAndObjects.Task3;
 public class Student {
     String lastNameAndInitials;
     int numberGroup;
-    int[] performance = new int[5];
+    int[] performance;
 
     public Student() {
     }

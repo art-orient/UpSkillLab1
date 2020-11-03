@@ -1,14 +1,16 @@
 package Сlasses.TheSimplestClassesAndObjects.Task1;
-
-import Сlasses.TheSimplestClassesAndObjects.Task1.Test1;
+// 1. Создайте класс Test1 двумя переменными. Добавьте метод вывода на экран и методы изменения этих переменных.
+// Добавьте метод, который находит сумму значений этих переменных, и метод, который находит наибольшее значение
+// из этих двух переменных.
 
 public class Main {
     public static void main(String[] args) {
-        Test1.printInfo();
-        Test1.secondVar = Test1.add100(Test1.secondVar);
-        Test1.firstVar = Test1.x2(Test1.firstVar);
-        Test1.printInfo();
-        System.out.println("Sum = " + Test1.sum(Test1.firstVar, Test1.secondVar));
-        System.out.println("Max = " + Test1.findMax(Test1.firstVar, Test1.secondVar));
+        Test1 test = new Test1();
+        test.printInfo();
+        test.setFirstVar(15);
+        test.setSecondVar(17);
+        test.printInfo();
+        System.out.println("Sum = " + test.sum());
+        System.out.println("Max = " + test.findMax());
     }
 }

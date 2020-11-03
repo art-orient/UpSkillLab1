@@ -3,8 +3,11 @@ package Сlasses.TheSimplestClassesAndObjects.Task2;
 // Добавьте конструктор, инициализирующий члены класса по умолчанию.
 // Добавьте set- и get- методы для полей экземпляра класса.
 public class Test2 {
-    String name;
-    int age;
+    private String name;
+    private int age;
+    private final String NAME = "Petya";
+    private final int AGE = 15;
+
 
     public Test2(String name, int age) {
         this.name = name;
@@ -12,8 +15,7 @@ public class Test2 {
     }
 
     public Test2() {
-        this.name = "Petya";
-        this.age = 10;
+        new Test2(NAME, AGE);
     }
 
     public String getName() {
