@@ -1,4 +1,4 @@
-package Сlasses.TheSimplestClassesAndObjects;
+package Сlasses.TheSimplestClassesAndObjects.Task1;
 
 import Сlasses.TheSimplestClassesAndObjects.Task1.Test1;
 

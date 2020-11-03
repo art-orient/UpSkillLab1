@@ -12,7 +12,7 @@ public class Test2 {
     }
 
     public Test2() {
-        this.name = "Petya;
+        this.name = "Petya";
         this.age = 10;
     }
 
