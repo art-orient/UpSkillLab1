@@ -35,12 +35,17 @@ public class Train {
         int number = scanner.nextInt();
         for (Train train : trains) {
             if (train.numberTrain == number){
-                System.out.printf("Trains № %d will arrive in %s at %s.\n",
-                        train.numberTrain, train.destination, train.departureTime);
+                    System.out.println(train);
                 return;
             }
         }
         System.out.println("There is no train with this number on the schedule");
+    }
+
+    public String toString (){
+        String info = String.format("Trains № %d will arrive in %s at %s.\n",
+                this.numberTrain, this.destination, this.departureTime);
+        return info;
     }
 
     public static Train[] sortDestination (Train[] trains){
