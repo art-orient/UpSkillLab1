@@ -5,8 +5,8 @@ package Сlasses.TheSimplestClassesAndObjects.Task2;
 public class Test2 {
     private String name;
     private int age;
-    private final String NAME = "Petya";
-    private final int AGE = 15;
+    private static final String NAME = "Petya";
+    private static final int AGE = 15;
 
 
     public Test2(String name, int age) {
@@ -15,7 +15,7 @@ public class Test2 {
     }
 
     public Test2() {
-        new Test2(NAME, AGE);
+        this(NAME, AGE);
     }
 
     public String getName() {
