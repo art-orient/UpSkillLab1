@@ -1,7 +1,5 @@
 package Сlasses.TheSimplestClassesAndObjects.Task4;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Train {
