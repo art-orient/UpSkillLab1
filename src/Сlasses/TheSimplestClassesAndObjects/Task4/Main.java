@@ -1,6 +1,10 @@
 package Сlasses.TheSimplestClassesAndObjects.Task4;
 
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+
 // 4. Создайте класс Train, содержащий поля: название пункта назначения, номер поезда, время отправления.
 // Создайте данные в массив из пяти элементов типа Train, добавьте возможность сортировки элементов массива
 // по номерам поездов. Добавьте возможность вывода информации о поезде, номер которого введен пользователем.
@@ -12,11 +16,11 @@ public class Main {
         Train[] trains = new Train[numberTrains];
         trains[0] = new Train ("Minsk", 223, "19:15");
         trains[1] = new Train ("Atlanta", 18, "12.10");
-        trains[2] = new Train ("Brest", 237, "10:40");
+        trains[2] = new Train ("Grodno", 237, "10 40");
         trains[3] = new Train ("Grodno", 143, "7.50");
-        trains[4] = new Train ("Minsk", 180, "11:30");
+        trains[4] = new Train ("Minsk", 180, "21-30");
 
-        Train.sortNumberTrain(trains);
+        Arrays.sort(trains, new Train.NumberComparator());
         System.out.println("Sorted by train numbers:");
         for (int i = 0; i < trains.length; i++) {
             System.out.print(trains[i].getNumberTrain() + "-");
@@ -24,7 +28,8 @@ public class Main {
         }
         System.out.println("\n");
         Train.printInfo(trains);
-        Train.sortDestination(trains);
+
+        Arrays.sort(trains, new Train.DestinationComparator());
         System.out.println("Sorted by destination:");
         for (int i = 0; i < trains.length; i++) {
             System.out.print(trains[i].getDestination() + " - ");

@@ -1,5 +1,6 @@
 package Сlasses.TheSimplestClassesAndObjects.Task4;
 import java.time.LocalTime;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Train {
@@ -10,23 +11,10 @@ public class Train {
     public Train(String destination, int numberTrain, String time) {
         this.destination = destination;
         this.numberTrain = numberTrain;
-        String[] hourAndMinuts = time.split("[:\\.]");
+        String[] hourAndMinuts = time.split("[:\\. -]");
         int hour = Integer.parseInt(hourAndMinuts[0]);
         int minuts = Integer.parseInt(hourAndMinuts[1]);
         this.departureTime = LocalTime.of(hour, minuts);
-    }
-
-    public static Train[] sortNumberTrain (Train[] trains){
-        for (int i = 0; i < trains.length; i++) {
-            for (int j = i+1; j < trains.length; j++) {
-                if (trains[j].numberTrain < trains[i].numberTrain) {
-                    Train temp = trains[i];
-                    trains[i] = trains[j];
-                    trains[j] = temp;
-                }
-            }
-        }
-        return trains;
     }
 
     public static void printInfo (Train[] trains){
@@ -77,5 +65,32 @@ public class Train {
 
     public LocalTime getDepartureTime() {
         return departureTime;
+    }
+
+    static class NumberComparator implements Comparator<Train>{
+        @Override
+        public int compare (Train a, Train b){
+            return a.numberTrain - b.numberTrain;
+        }
+    }
+
+    static class DestinationComparator implements Comparator<Train>{
+        @Override
+        public int compare (Train a, Train b){
+            int flag = a.destination.compareToIgnoreCase(b.destination);
+            if (flag == 0){
+                DepartureTimeComparator test = new DepartureTimeComparator();
+                return test.compare(a, b);
+//                return a.departureTime.compareTo(b.departureTime);
+            } else {
+                return flag;
+            }
+        }
+    }
+    static class DepartureTimeComparator implements Comparator<Train>{
+        @Override
+        public int compare (Train a, Train b){
+            return a.departureTime.compareTo(b.departureTime);
+        }
     }
 }
