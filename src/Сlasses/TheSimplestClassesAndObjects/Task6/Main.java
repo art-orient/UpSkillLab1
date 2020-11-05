@@ -6,8 +6,17 @@ package Сlasses.TheSimplestClassesAndObjects.Task6;
  */
 public class Main {
     public static void main(String[] args) {
-
-
-
+        MyTime myTime = new MyTime(2, 4, 15);
+        System.out.println(myTime.getTime());
+        MyTime myTime2 = new MyTime();
+        System.out.println(myTime2.getTime());
+        myTime.changeHours(30);
+        System.out.println(myTime.getTime());
+        myTime2.changeMinutes(-310);
+        System.out.println(myTime2.getTime());
+        myTime.changeSeconds(380);
+        System.out.println(myTime.getTime());
+        myTime2.changeSeconds(-380);
+        System.out.println(myTime2.getTime());
     }
 }
