@@ -46,7 +46,7 @@ public class MyTime {
         }
         return this.minutes;
     }
-    
+
     public int changeSeconds (int seconds){
         this.seconds += seconds;
         if (this.seconds > 59){
