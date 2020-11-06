@@ -1,7 +1,5 @@
 package Сlasses.TheSimplestClassesAndObjects.Task8;
 
-import Сlasses.TheSimplestClassesAndObjects.Task4.Train;
-
 import java.util.Comparator;
 
 public class Customer {
