@@ -40,6 +40,6 @@ public class Main {
         System.out.println(customers);
         Collections.sort(customers.getCustomers(), new Customer.CreditCardComparator());
         System.out.println(customers);
-        System.out.println(customers.getCreditCard(2000_0000_0000_0000L, 4000_0000_0000_0000L));
+        customers.getCreditCard(2000_0000_0000_0000L, 4000_0000_0000_0000L);
     }
 }

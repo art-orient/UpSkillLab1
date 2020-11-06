@@ -26,14 +26,18 @@ public class Customers {
         return output.toString();
     }
 
-    public ArrayList<Customer> getCreditCard(long min, long max){
-        ArrayList<Customer> sample = new ArrayList<>();
+    public void getCreditCard(long min, long max){
+        ArrayList<Customer> sample = new ArrayList<Customer>();
         for (Customer customer : customers) {
             if (customer.getCreditCard() >= min && customer.getCreditCard() <= max){
                 sample.add(customer);
             }
         }
-        return sample;
+        StringBuilder output = new StringBuilder();
+        for (Customer customer : sample) {
+            output.append(customer).append("\n");
+        }
+        System.out.println(output);
     }
 
     public ArrayList<Customer> getCustomers() {
