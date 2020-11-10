@@ -4,7 +4,9 @@ package Сlasses.AggregationAndComposition.Task3;
 public class Main {
     public static void main(String[] args) {
         City minsk = new City("Minsk", 348, 2018281);
+        BuildTerritory build = new BuildTerritory();
         State belarus = new State("Belarus", minsk);
+        belarus.addTerritory(minsk);
         System.out.println(belarus);
     }
 }

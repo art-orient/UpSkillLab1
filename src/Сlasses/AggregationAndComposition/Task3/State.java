@@ -12,6 +12,13 @@ public class State {
     public State (String name, City capital) {
         this.name = name;
         this.capital = capital;
+        this.regions = new ArrayList<>();
+    }
+
+    public void addTerritory(Territory territory){
+        regions.add(territory);
+        this.area += territory.area;
+        this.population += territory.population;
     }
 
     public String getName() {
@@ -22,11 +29,11 @@ public class State {
         this.name = name;
     }
 
-    public String getCapital() {
+    public City getCapital() {
         return capital;
     }
 
-    public void setCapital(String capital) {
+    public void setCapital(City capital) {
         this.capital = capital;
     }
 
@@ -40,6 +47,7 @@ public class State {
 
     @Override
     public String toString(){
-        return String.format("%s has capital %s and area %.2f, there are %d people", name, capital, area, population);
+        return String.format("Country %s has capital %s and area %.2f square kilometers, there are about %d people.",
+                name, capital.name, area, population);
     }
 }

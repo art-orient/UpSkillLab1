@@ -7,6 +7,11 @@ public class City extends Territory {
 
     public City(String name, double area, int population) {
         super(name, area, population);
+        this.cityDistricts = new ArrayList<>();
+    }
+
+    public void addCityDistrict(District district){
+        cityDistricts.add(district);
     }
 
     public ArrayList<District> getCityDistricts() {
