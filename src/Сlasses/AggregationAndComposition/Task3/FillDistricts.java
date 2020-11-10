@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class FillDistricts {
     public static void fillDistricts(ArrayList regions){
-        System.out.println(regions.get(1));
         Region brestReg = (Region) regions.get(1);
         Region vitebskReg = (Region) regions.get(2);
         Region gomelReg = (Region) regions.get(3);
