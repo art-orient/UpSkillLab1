@@ -21,6 +21,34 @@ public class State {
         this.population += territory.population;
     }
 
+    public void printCapital(){
+        System.out.println("Capital of " + name + " is " + capital.name + ".");
+    }
+
+    public void printArea(){
+        area = 0;
+        for (int i = 0; i < regions.size(); i++) {
+            area += regions.get(i).area;
+        }
+        System.out.println("Area of " + name + " equals " + area + " square kilometers.");
+    }
+
+    public void printSunRegions(){
+        System.out.println("Number of regions in " + name + " is " + (regions.size() - 1) + ".");
+        System.out.println("Capital " + capital.name + " not included in any area.");
+    }
+
+    public void printRegionCapital() {
+        System.out.print(name + " has regional centers: ");
+        for (int i = 0; i < regions.size(); i++) {
+            if (regions.get(i).capital != null) {
+                System.out.print(regions.get(i).capital + ", ");
+            }
+        }
+        System.out.println("\b\b.");
+    }
+
+
     public String getName() {
         return name;
     }
@@ -47,6 +75,10 @@ public class State {
 
     @Override
     public String toString(){
+        area = 0;
+        for (int i = 0; i < regions.size(); i++) {
+            area += regions.get(i).area;
+        }
         return String.format("Country %s has capital %s and area %.2f square kilometers, there are about %d people.",
                 name, capital.name, area, population);
     }

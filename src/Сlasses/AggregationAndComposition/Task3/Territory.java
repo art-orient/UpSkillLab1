@@ -2,6 +2,7 @@ package Сlasses.AggregationAndComposition.Task3;
 
 public abstract class Territory {
     protected String name;
+    protected String capital;
     protected double area;
     protected int population;
 
