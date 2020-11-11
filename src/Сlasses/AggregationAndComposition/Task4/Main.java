@@ -1,6 +1,10 @@
 package Сlasses.AggregationAndComposition.Task4;
 
+import Сlasses.TheSimplestClassesAndObjects.Task8.Customer;
+
 import java.sql.SQLOutput;
+import java.util.Collections;
+import java.util.Comparator;
 
 // 4. Счета. Клиент может иметь несколько счетов в банке. Учитывать возможность блокировки/разблокировки счета.
 // Реализовать поиск и сортировку счетов. Вычисление общей суммы по счетам. Вычисление суммы по всем счетам,
@@ -19,9 +23,17 @@ public class Main {
         System.out.println(bankAccount5);
         bankAccount2.blockAccount();
         System.out.println(bankAccount2);
+        bankAccount2.unBlockAccount();
+        System.out.println(bankAccount2);
         System.out.println("Amount for all accounts is $ " + ivanov.getSumAllAccounts());
         System.out.println("Amount for all accounts, having positive balance is $ " + ivanov.getSumPlusBalance());
         System.out.println("Amount for all accounts, having negative balance is $ " + ivanov.getSumMinusBalance());
+        Collections.sort(ivanov.getAccounts(), new Client.NumberComparator());
+        for (BankAccount account : ivanov.getAccounts()){
+            System.out.println(account);
+        }
+        System.out.println();
+        Collections.sort(ivanov.getAccounts(), new Client.BalanceComparator());
         for (BankAccount account : ivanov.getAccounts()){
             System.out.println(account);
         }
