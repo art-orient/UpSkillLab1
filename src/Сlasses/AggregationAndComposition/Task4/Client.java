@@ -22,7 +22,7 @@ public class Client {
         return sum;
     }
 
-    public double getSumPlusBalance(){
+    public double getSumPositiveBalance(){
         double sum = 0;
         for (BankAccount account: this.accounts) {
             if (account.getBalance() > 0) {
@@ -32,7 +32,7 @@ public class Client {
         return sum;
     }
 
-    public double getSumMinusBalance(){
+    public double getSumNegativeBalance(){
         double sum = 0;
         for (BankAccount account: this.accounts) {
             if (account.getBalance() < 0) {

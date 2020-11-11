@@ -23,11 +23,12 @@ public class Main {
         System.out.println(bankAccount5);
         bankAccount2.blockAccount();
         System.out.println(bankAccount2);
+        bankAccount2.takeMoney(700);
         bankAccount2.unBlockAccount();
         System.out.println(bankAccount2);
         System.out.println("Amount for all accounts is $ " + ivanov.getSumAllAccounts());
-        System.out.println("Amount for all accounts, having positive balance is $ " + ivanov.getSumPlusBalance());
-        System.out.println("Amount for all accounts, having negative balance is $ " + ivanov.getSumMinusBalance());
+        System.out.println("Amount for all accounts, having positive balance is $ " + ivanov.getSumPositiveBalance());
+        System.out.println("Amount for all accounts, having negative balance is $ " + ivanov.getSumNegativeBalance());
         Collections.sort(ivanov.getAccounts(), new Client.NumberComparator());
         for (BankAccount account : ivanov.getAccounts()){
             System.out.println(account);

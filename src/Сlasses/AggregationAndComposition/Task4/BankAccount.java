@@ -20,6 +20,10 @@ public class BankAccount {
     }
 
     public void takeMoney(double money){
+        if (!this.isBlock){
+            System.out.println("Account is blocked! Operation is not possible.");
+            return;
+        }
         balance -= money;
         System.out.printf("Withdrawn $ %.2f, balance of account %d is $ %.2f.\n", money, this.number, balance);
     }
