@@ -18,7 +18,7 @@ public class Main {
         myAgency.addTour(exBusAIPoland);
         myAgency.addTour(exCarAIPoland);
 
-        Client vasya = new Client("Vasya", Type.VACATION, Transport.AIR, Food.ALL_INCLUSIVE, 7, 1500);
+        Client vasya = new Client("Vasya", Type.VACATION, Transport.AIR, Food.ALL_INCLUSIVE, 7, 700);
         System.out.println(myAgency.findTour(vasya));
 //        System.out.println(myAgency);
 
