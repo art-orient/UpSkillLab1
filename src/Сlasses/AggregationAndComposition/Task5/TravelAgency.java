@@ -1,6 +1,7 @@
 package Сlasses.AggregationAndComposition.Task5;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class TravelAgency {
     private String name;
@@ -57,5 +58,12 @@ public class TravelAgency {
             output.append(tour);
         }
         return output.toString();
+    }
+
+    static class TransportComparator implements Comparator<Tour> {
+        @Override
+        public int compare (Tour a, Tour b){
+            return a.getTransport().ordinal() - b.getTransport().ordinal();
+        }
     }
 }

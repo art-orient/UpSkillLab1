@@ -1,4 +1,7 @@
 package Сlasses.AggregationAndComposition.Task5;
+
+import java.util.Collections;
+
 // 5. Туристические путевки. Сформировать набор предложений клиенту по выбору туристической путевки
 // различного типа (отдых, экскурсии, лечение, шопинг, круиз и т. д.) для оптимального выбора.
 // Учитывать возможность выбора транспорта, питания и числа дней. Реализовать выбор и сортировку путевок.
@@ -20,7 +23,8 @@ public class Main {
 
         Client vasya = new Client("Vasya", Type.VACATION, Transport.AIR, Food.ALL_INCLUSIVE, 7, 700);
         System.out.println(myAgency.findTour(vasya));
-//        System.out.println(myAgency);
+        Collections.sort(myAgency.getTours(), new TravelAgency.TransportComparator());
+        System.out.println(myAgency);
 
     }
 }
