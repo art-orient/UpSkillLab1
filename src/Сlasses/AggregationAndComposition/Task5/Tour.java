@@ -88,6 +88,7 @@ public class Tour {
     public String toString(){
         int cost = this.amountTransport + this.amountPerDay * this.numbersOfNights;
         return String.format("We have tour in %s, in hotel \"%s\" has type - %s, use transport - %s, type of food - %s." +
-                "\nTour for %d nights cost $ %d.\n", country, hotelName, type, transport, food, numbersOfNights, cost);
+                "\nTour for %d nights cost $ %d. There is every day cost additional $ %d.\n",
+                country, hotelName, type, transport, food, numbersOfNights, cost, amountPerDay);
     }
 }

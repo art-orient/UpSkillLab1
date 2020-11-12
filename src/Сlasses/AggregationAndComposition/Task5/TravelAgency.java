@@ -66,4 +66,11 @@ public class TravelAgency {
             return a.getTransport().ordinal() - b.getTransport().ordinal();
         }
     }
+
+    static class FoodComparator implements Comparator<Tour> {
+        @Override
+        public int compare (Tour a, Tour b){
+            return a.getFood().ordinal() - b.getFood().ordinal();
+        }
+    }
 }
