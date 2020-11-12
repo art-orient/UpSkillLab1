@@ -20,14 +20,15 @@ public class TravelAgency {
     public String findTour (Client client){
         StringBuilder findTour = new StringBuilder();
         findTour.append("Travel Agency \"" + name + "\" has next tours:\n");
+        int sum = 0;
         for (Tour tour : tours) {
             if(tour.getType().equals(client.getType()) &&
                     tour.getTransport().equals(client.getTransport()) &&
                     tour.getFood().equals(client.getFood())) {
-                tour.setNumbersOfNights(client.getNumberOfnights());
-                if (tour.getAmountTransport() + tour.getAmountPerDay() * client.getNumberOfnights()
-                        <= client.getMaxBudget()) {
-                    findTour.append(tour);
+                sum = tour.getAmountTransport() + tour.getAmountPerDay() * client.getNumberOfnights();
+                if (sum <= client.getMaxBudget()) {
+                    String result = "Tour total cost $ " + sum + ":\n";
+                    findTour.append(result).append(tour);
                 }
             }
         }
