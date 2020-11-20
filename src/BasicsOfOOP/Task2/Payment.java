@@ -59,7 +59,7 @@ public class Payment {
             System.out.printf("%-15s $ %.2f\n", product.name, product.price);
         }
         sum = this.amount();
-        System.out.println("Amount to pay:  $ " + sum);
+        System.out.printf("Amount to pay:  $ %.2f\n", sum);
     }
 
     private class Product{
