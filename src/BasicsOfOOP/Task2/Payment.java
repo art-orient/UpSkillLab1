@@ -3,12 +3,14 @@ package BasicsOfOOP.Task2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 
 // Создать класс Payment с внутренним классом, с помощью объектов которого
 // можно сформировать покупку из нескольких товаров.
 public class Payment {
-    private double sum;
+    private BigDecimal sum = new BigDecimal(0);
     private ArrayList<Product> products;
 
     public Payment() {
@@ -19,9 +21,9 @@ public class Payment {
         products.add(product);
     }
 
-    public double amount() {
+    public BigDecimal amount() {
         for (Product product : products) {
-            sum += product.price;
+        sum = sum.add(product.price);
         }
         return sum;
     }
@@ -40,8 +42,9 @@ public class Payment {
                 Payment.Product product = new Payment.Product();
                 product.setName(str);
                 System.out.print("Input price of product: ");
-                product.setPrice(Double.parseDouble(reader.readLine()));
-                int number = 0;
+                product.setPrice(reader.readLine());
+                System.out.println("Price of this product = $ " + product.getPrice());
+                int number;
                 System.out.print("Input the number of such products in the basket: ");
                 number = Integer.parseInt(reader.readLine());
                 for (int i = 0; i < number; i++) {
@@ -64,12 +67,12 @@ public class Payment {
 
     private class Product{
         private String name;
-        private double price;
+        private BigDecimal price;
 
         public Product() {
         }
 
-        public Product(String name, double price) {
+        public Product(String name, BigDecimal price) {
             this.name = name;
             this.price = price;
         }
@@ -82,12 +85,12 @@ public class Payment {
             this.name = name;
         }
 
-        public double getPrice() {
+        public BigDecimal getPrice() {
             return price;
         }
 
-        public void setPrice(double price) {
-            this.price = price;
+        public void setPrice(String price) {
+            this.price = new BigDecimal(price).setScale(2, RoundingMode.HALF_UP);
         }
 
         @Override
