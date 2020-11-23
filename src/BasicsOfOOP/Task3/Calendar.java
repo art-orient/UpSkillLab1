@@ -42,9 +42,6 @@ public class Calendar {
 
         public Day(int day, boolean isWeekend, boolean isHoliday) {
             this.day = day;
-            if (isHoliday){
-                isWeekend = true;
-            }
             this.isWeekend = isWeekend;
             this.isHoliday = isHoliday;
         }
