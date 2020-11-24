@@ -1,4 +1,4 @@
-package BasicsOfOOP.Task4;
+package basicsOfOOP.task4;
 /**Создать консольное приложение, удовлетворяющее следующим требованиям:
  • Приложение должно быть объектно-, а не процедурно-ориентированным.
  • Каждый класс должен иметь отражающее смысл название и информативный состав.
@@ -14,6 +14,5 @@ package BasicsOfOOP.Task4;
  */
 public class Main {
     public static void main(String[] args) {
-
     }
 }

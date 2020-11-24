@@ -1,4 +1,4 @@
-package BasicsOfOOP.Task1;
+package basicsOfOOP.Task1;
 
 public class Directory {
     private String path;

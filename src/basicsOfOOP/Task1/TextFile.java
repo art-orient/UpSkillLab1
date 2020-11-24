@@ -1,4 +1,4 @@
-package BasicsOfOOP.Task1;
+package basicsOfOOP.Task1;
 
 import java.io.*;
 

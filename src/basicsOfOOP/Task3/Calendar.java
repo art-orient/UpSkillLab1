@@ -1,4 +1,4 @@
-package BasicsOfOOP.Task3;
+package basicsOfOOP.Task3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +10,8 @@ public class Calendar {
         this.days = new ArrayList<>();
     }
 
-    public void addDay(int day, boolean isWeekend, boolean isHolidaY){
-        days.add(new Day(day, isWeekend, isHolidaY));
+    public void addDay(int day, boolean isDayOff, boolean isHolidaY){
+        days.add(new Day(day, isDayOff, isHolidaY));
     }
 
     public void addDay(int day){
@@ -37,12 +37,12 @@ public class Calendar {
 
     private class Day{
         private int day;
-        private boolean isWeekend;
+        private boolean isDayOff;
         private boolean isHoliday;
 
-        public Day(int day, boolean isWeekend, boolean isHoliday) {
+        public Day(int day, boolean isDayOff, boolean isHoliday) {
             this.day = day;
-            this.isWeekend = isWeekend;
+            this.isDayOff = isDayOff;
             this.isHoliday = isHoliday;
         }
 
@@ -51,7 +51,7 @@ public class Calendar {
             String dayType;
             if (isHoliday) {
                 dayType = "holiday (day off).";
-            } else if (isWeekend){
+            } else if (isDayOff){
                 dayType = "day off.";
             } else {
                 dayType = "working day.";
@@ -67,19 +67,19 @@ public class Calendar {
             this.day = day;
         }
 
-        public boolean isWeekend() {
-            return isWeekend;
+        public boolean isDayOff() {
+            return isDayOff;
         }
 
-        public void setWeekend(boolean weekend) {
-            isWeekend = weekend;
+        public void setIsDayOff(boolean isDayOff) {
+            this.isDayOff = isDayOff;
         }
 
         public boolean isHoliday() {
             return isHoliday;
         }
 
-        public void setHoliday(boolean holiday) {
+        public void setIsHoliday(boolean holiday) {
             isHoliday = holiday;
         }
     }

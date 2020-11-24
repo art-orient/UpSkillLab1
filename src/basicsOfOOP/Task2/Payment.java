@@ -1,4 +1,4 @@
-package BasicsOfOOP.Task2;
+package basicsOfOOP.Task2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

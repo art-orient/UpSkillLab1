@@ -1,4 +1,4 @@
-package BasicsOfOOP.Task2;
+package basicsOfOOP.Task2;
 
 public class Main {
     public static void main(String[] args) {
