@@ -1,4 +1,11 @@
-package basicsOfOOP.task4;
+package basicsOfOOP.art.task4.main;
+
+import basicsOfOOP.art.task4.bean.CaveOfDragon;
+import basicsOfOOP.art.task4.bean.Treasure;
+import basicsOfOOP.art.task4.dao.TreasureStorage;
+
+import java.io.IOException;
+
 /**Создать консольное приложение, удовлетворяющее следующим требованиям:
  • Приложение должно быть объектно-, а не процедурно-ориентированным.
  • Каждый класс должен иметь отражающее смысл название и информативный состав.
@@ -14,5 +21,21 @@ package basicsOfOOP.task4;
  */
 public class Main {
     public static void main(String[] args) {
+        CaveOfDragon cave = new CaveOfDragon();
+        cave.addTreasure(new Treasure("Ring", 40));
+        cave.addTreasure(new Treasure("Cup", 75));
+        System.out.println(cave);
+        TreasureStorage storage = new TreasureStorage();
+//        try {
+//            storage.saveTreasures(cave.getTreasures());
+//        } catch (IOException e){
+//            e.printStackTrace();
+//        }
+        try {
+            cave.setTreasures(storage.loadTreasures());
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        System.out.println(cave);
     }
 }
