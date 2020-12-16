@@ -8,13 +8,12 @@ import java.util.List;
 public class TreasureStorage {
     private final String dir = System.getProperty("user.dir");
     private final File file = new File(dir + "/resourses/treasures.csv");
-    private final String lineSeparator = System.getProperty("line.separator");
     private final String separator = ",";
 
     public void saveTreasures(List<Treasure> treasures) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
         for (Treasure treasure : treasures) {
-            writer.write(treasure.getName() + separator + treasure.getPrice() + lineSeparator);
+            writer.newLine(treasure.getName() + separator + treasure.getPrice());
         }
         writer.flush();
     }

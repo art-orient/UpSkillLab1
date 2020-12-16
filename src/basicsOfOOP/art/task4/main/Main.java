@@ -27,6 +27,7 @@ public class Main {
             cave.setTreasures(storage.loadTreasures());
         } catch (IOException e){
             e.printStackTrace();
+            System.exit(1);
         }
         Menu menu = new Menu();
         menu.menu(cave);

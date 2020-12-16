@@ -40,6 +40,7 @@ public class Treasure implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Treasure treasure = (Treasure) o;
+        if (treasure.name == null) return false;
         return price == treasure.price && name.equals(treasure.name);
     }
 

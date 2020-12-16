@@ -36,7 +36,11 @@ public class CaveOfDragon implements Serializable {
     }
 
     public Treasure getTreasure(int index) {
-        return treasures.get(index);
+        if (index < treasures.size() && index >= 0) {
+            return treasures.get(index);
+        } else {
+            return null;
+        }
     }
 
     public void setTreasure(int index, Treasure treasure) {
