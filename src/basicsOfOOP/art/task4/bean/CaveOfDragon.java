@@ -58,6 +58,6 @@ public class CaveOfDragon implements Serializable {
 
     @Override
     public String toString() {
-        return "CaveOfDragon {" + "treasures = " + treasures + '}';
+        return "CaveOfDragon {" + "treasures = " + treasures + "}";
     }
 }

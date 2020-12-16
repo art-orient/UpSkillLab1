@@ -1,7 +1,6 @@
 package basicsOfOOP.art.task4.dao;
 
 import basicsOfOOP.art.task4.bean.Treasure;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;

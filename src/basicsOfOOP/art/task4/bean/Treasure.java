@@ -50,6 +50,6 @@ public class Treasure implements Serializable {
 
     @Override
     public String toString() {
-        return "Treasure [" + "name = '" + name + '\'' + ", price = " + price + ']';
+        return "\nTreasure [" + "name = " + name + ", price = " + price + ']';
     }
 }
