@@ -1,7 +1,6 @@
 package basicsOfOOP.art.task5.bean;
 
 import basicsOfOOP.art.task5.builder.ElementData;
-
 import java.util.HashMap;
 import java.util.Map;
 

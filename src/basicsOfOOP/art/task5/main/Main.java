@@ -1,13 +1,8 @@
 package basicsOfOOP.art.task5.main;
 
 import basicsOfOOP.art.task5.bean.Bouquet;
-import basicsOfOOP.art.task5.bean.Flower;
-import basicsOfOOP.art.task5.bean.Package;
-import basicsOfOOP.art.task5.builder.FlowerBuilder;
+import basicsOfOOP.art.task5.builder.BouquetBuilder;
 import basicsOfOOP.art.task5.logic.BouquetAction;
-import basicsOfOOP.art.task5.property.Color;
-import basicsOfOOP.art.task5.property.Size;
-import java.math.BigDecimal;
 
 /** Задача 5.
  Создать консольное приложение, удовлетворяющее следующим требованиям:
@@ -27,22 +22,14 @@ import java.math.BigDecimal;
 public class Main {
     public static void main(String[] args) {
         BouquetAction bouquetAction = new BouquetAction();
-        Flower rose = new FlowerBuilder("Роза", Color.PINK, Size.MEDIUM, new BigDecimal(5.50)).build();
-        Flower tulip = new FlowerBuilder("Тюльпан", Color.YELLOW, Size.BIG, new BigDecimal(3.1)).build();
-        Flower gladiolus = new FlowerBuilder("Гладиолус", Color.WHITE, Size.SMALL, new BigDecimal(8)).build();
-        Package film = new Package("Пленка с ленточками", new BigDecimal(0.50));
-        Package bow = new Package("Подарочная коробка", new BigDecimal(4.5));
-        Package newYear = new Package("Новогодняя упаковка", new BigDecimal(0.9));
-        Package paper = new Package("Бумага", new BigDecimal(0));
-        Bouquet bouquet = bouquetAction.createBouquet();
-        bouquet.addElement(rose, 5);
-        bouquet.addElement(tulip, 4);
-        bouquet.addElement(gladiolus, 1);
-        bouquet.addElement(film, 1);
-        bouquet.removeElement(film);
-        bouquet.addElement(newYear, 1);
-
+        BouquetBuilder builder = new BouquetBuilder();
+        Bouquet bouquet = builder.makeBouquet();
         bouquetAction.printInfo(bouquet);
         bouquetAction.getCostBouquet(bouquet);
+        System.out.println();
+
+        Bouquet bouquet2 = builder.makeBouquet2();
+        bouquetAction.printInfo(bouquet2);
+        bouquetAction.getCostBouquet(bouquet2);
     }
 }
