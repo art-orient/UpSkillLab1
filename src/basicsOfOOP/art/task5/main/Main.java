@@ -3,10 +3,10 @@ package basicsOfOOP.art.task5.main;
 import basicsOfOOP.art.task5.bean.Bouquet;
 import basicsOfOOP.art.task5.bean.Flower;
 import basicsOfOOP.art.task5.bean.Package;
+import basicsOfOOP.art.task5.builder.FlowerBuilder;
 import basicsOfOOP.art.task5.logic.BouquetAction;
 import basicsOfOOP.art.task5.property.Color;
 import basicsOfOOP.art.task5.property.Size;
-
 import java.math.BigDecimal;
 
 /** Задача 5.
@@ -27,9 +27,9 @@ import java.math.BigDecimal;
 public class Main {
     public static void main(String[] args) {
         BouquetAction bouquetAction = new BouquetAction();
-        Flower rose = new Flower("Роза", Color.PINK, Size.MEDIUM, new BigDecimal(5.50));
-        Flower tulip = new Flower("Тюльпан", Color.YELLOW, Size.BIG, new BigDecimal(3.1));
-        Flower gladiolus = new Flower("Гладиолус", Color.WHITE, Size.SMALL, new BigDecimal(8));
+        Flower rose = new FlowerBuilder("Роза", Color.PINK, Size.MEDIUM, new BigDecimal(5.50)).build();
+        Flower tulip = new FlowerBuilder("Тюльпан", Color.YELLOW, Size.BIG, new BigDecimal(3.1)).build();
+        Flower gladiolus = new FlowerBuilder("Гладиолус", Color.WHITE, Size.SMALL, new BigDecimal(8)).build();
         Package film = new Package("Пленка с ленточками", new BigDecimal(0.50));
         Package bow = new Package("Подарочная коробка", new BigDecimal(4.5));
         Package newYear = new Package("Новогодняя упаковка", new BigDecimal(0.9));

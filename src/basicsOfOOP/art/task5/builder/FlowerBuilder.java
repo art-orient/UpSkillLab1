@@ -4,6 +4,7 @@ import basicsOfOOP.art.task5.bean.Flower;
 import basicsOfOOP.art.task5.property.Color;
 import basicsOfOOP.art.task5.property.Size;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class FlowerBuilder {
     private String name;
@@ -26,7 +27,7 @@ public class FlowerBuilder {
         if (price.compareTo(new BigDecimal(0)) < 0) {
             throw new IllegalArgumentException("Цена не может быть отрицательной.");
         }
-        this.price = price;
+        this.price = price.setScale(2, RoundingMode.HALF_EVEN);
     }
 
     public Flower build() {
