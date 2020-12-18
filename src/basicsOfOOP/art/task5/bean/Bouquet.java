@@ -35,9 +35,7 @@ public class Bouquet {
     }
 
     public void removeElement(ElementData element){
-        if (bouquet.containsKey(element)){
-            bouquet.remove(element);
-        }
+        bouquet.remove(element);
     }
 
     @Override
