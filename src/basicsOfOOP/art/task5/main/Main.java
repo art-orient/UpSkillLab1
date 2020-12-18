@@ -31,11 +31,16 @@ public class Main {
         Flower tulip = new Flower("Тюльпан", Color.YELLOW, Size.BIG, new BigDecimal(3.1));
         Flower gladiolus = new Flower("Гладиолус", Color.WHITE, Size.SMALL, new BigDecimal(8));
         Package film = new Package("Пленка с ленточками", new BigDecimal(0.50));
+        Package bow = new Package("Подарочная коробка", new BigDecimal(4.5));
+        Package newYear = new Package("Новогодняя упаковка", new BigDecimal(0.9));
+        Package paper = new Package("Бумага", new BigDecimal(0));
         Bouquet bouquet = bouquetAction.createBouquet();
         bouquet.addElement(rose, 5);
         bouquet.addElement(tulip, 4);
         bouquet.addElement(gladiolus, 1);
         bouquet.addElement(film, 1);
+        bouquet.removeElement(film);
+        bouquet.addElement(newYear, 1);
 
         bouquetAction.printInfo(bouquet);
         bouquetAction.getCostBouquet(bouquet);

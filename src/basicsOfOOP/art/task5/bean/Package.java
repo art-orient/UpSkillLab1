@@ -2,6 +2,7 @@ package basicsOfOOP.art.task5.bean;
 
 import basicsOfOOP.art.task5.builder.ElementData;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Objects;
 
 public class Package implements ElementData {
@@ -10,7 +11,7 @@ public class Package implements ElementData {
 
     public Package(String name, BigDecimal price) {
         this.name = name;
-        this.price = price;
+        this.price = price.setScale(2, RoundingMode.HALF_EVEN);
     }
 
     @Override
