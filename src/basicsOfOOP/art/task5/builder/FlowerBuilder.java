@@ -24,6 +24,7 @@ public class FlowerBuilder {
         if (size == null){
             throw new NullPointerException("Укажите размер цветка.");
         }
+        this.size = size;
         if (price.compareTo(new BigDecimal(0)) < 0) {
             throw new IllegalArgumentException("Цена не может быть отрицательной.");
         }
