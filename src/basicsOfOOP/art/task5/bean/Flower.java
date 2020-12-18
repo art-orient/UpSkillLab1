@@ -18,7 +18,7 @@ public class Flower implements ElementData {
         this.name = name;
         this.color = color;
         this.size = size;
-        this.price = price.setScale(2, RoundingMode.HALF_EVEN.HALF_EVEN);
+        this.price = price.setScale(2, RoundingMode.HALF_EVEN);
     }
 
     public Flower(FlowerBuilder builder) {
