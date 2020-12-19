@@ -43,10 +43,20 @@ public abstract class Flower implements FlowerBuilder {
     }
 
     @Override
-    public abstract String name();
+    public abstract BigDecimal price();
 
     @Override
-    public abstract BigDecimal price();
+    public String name() {
+        StringBuilder info = new StringBuilder();
+        info.append(name).append(" ");
+        if (color != null) {
+            info.append(color).append(" ");
+        }
+        if (size != null){
+            info.append(size);
+        }
+        return info.toString();
+    }
 
     public Color getColor() {
         return color;

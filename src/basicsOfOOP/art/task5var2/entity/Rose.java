@@ -12,19 +12,6 @@ public class Rose extends Flower{
     }
 
     @Override
-    public String name() {
-        StringBuilder info = new StringBuilder();
-        info.append("Роза").append(" ");
-            if (color != null) {
-                info.append(color).append(" ");
-            }
-            if (size != null){
-                info.append(size);
-            }
-        return info.toString();
-    }
-
-    @Override
     public BigDecimal price() {
         if (size == Size.BIG){
             return new BigDecimal(6.5).setScale(2, RoundingMode.HALF_EVEN);
