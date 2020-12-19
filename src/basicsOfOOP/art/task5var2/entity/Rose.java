@@ -8,7 +8,8 @@ import java.math.RoundingMode;
 public class Rose extends Flower{
 
     public Rose(Color color, Size size) {
-        super("Роза", color, size, new BigDecimal(5.50).setScale(2, RoundingMode.HALF_EVEN));
+        super("Роза", color, size);
+        this.price = price();
     }
 
     @Override
